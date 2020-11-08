@@ -1,4 +1,5 @@
 @import '../../main_styles.scss';
+
 .heading-bar{
     display: flex;
     width: 100%;
@@ -14,5 +15,37 @@
         font-weight: 900;
         letter-spacing: 1px;
         font-size: 25px;
+    }
+}
+
+.display-budget{
+    display:flex;
+    height:250px;
+    width:100%;
+    background-color: rgb(38, 38, 126);
+    justify-content: center;
+    align-items: center;
+    h2{
+        color:rgb(233, 216, 170);
+        font-family: 'Calibri';
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-size: 50px;
+
+        &.green{
+            color: rgb(22, 170, 22);
+        }
+        &.red{
+            color: rgb(196, 59, 59);
+        }
+    }
+}
+
+.add-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .add-item-container{
+        width:680px;
     }
 }
