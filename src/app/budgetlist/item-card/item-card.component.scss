@@ -1,0 +1,73 @@
+@import '../../../main_styles.scss';
+
+.root{
+    display: flex;
+    width:100%;
+    position: relative;
+    &:hover{
+        .delete-icon-button{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    .delete-icon-button{
+        position: absolute;
+        height:20px;
+        width: 20px;
+        border-radius: 50%;
+        background:rgb(0, 0, 0);
+        background-image: url("../../../assets/delete_icon.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        right:-10px;
+        top:-12px;
+        transform: scale(0);
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    
+}
+.item{
+    display: flex;
+    width:100%;
+    background-color: rgb(233, 231, 231);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+    .description{
+        display: flex;
+        flex-grow: 1;
+        font-size: 15px;
+        margin-left: 5px;
+        align-items: center;
+        
+    }
+    .amount{
+        padding: 5px;
+        border-radius: 3px;
+    }
+    &:hover{
+        background-color: darken($color: #e4e4e4, $amount: 2%);
+    }
+}
+.income{
+    p{
+        color: $green;
+    }
+    .amount{
+        background-color:$light-green;
+    }
+}
+.expenditure{
+    p{
+        color: $red;
+    }
+    .amount{
+        background-color: rgb(224, 161, 161);
+    }
+}
