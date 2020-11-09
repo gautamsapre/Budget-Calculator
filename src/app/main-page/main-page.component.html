@@ -8,12 +8,12 @@
 
 <section class="add-item">
     <div class="add-item-container">
-        <app-addtobudget>
+        <app-addtobudget (submitForm)="addtoBudget($event)">
 
         </app-addtobudget>
     </div>
 </section>
 <hr >
-<app-budgetlist>
+<app-budgetlist [budgetItems]="budgetItems" (delete)="deleteItem($event)">
 
 </app-budgetlist>

@@ -1,17 +1,17 @@
 <div class="root">
-    <div class="item" [ngClass] ="{'income': isIncome , 'expenditure': !isIncome}">
+    <div class="item" (click)="onItemClick()" [ngClass] ="{'income': item.amount>=0 , 'expenditure': item.amount<0}">
         <div class="description">
             <p>
-                Test
+                {{item.description}}
             </p>
         </div>
         <div class="amount">
             <p>
-                500
+                {{item.amount}}
             </p>
         </div>
     </div>
-    <div class="delete-icon-button">
+    <div class="delete-icon-button" (click)="onDeleteClick()">
         
     </div>
 </div>
