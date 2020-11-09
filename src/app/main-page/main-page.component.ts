@@ -9,6 +9,7 @@ import { BudgetItem } from 'src/shared/model/budget/budget-item';
 export class MainPageComponent implements OnInit {
 
   budgetItems: BudgetItem[]= new Array<BudgetItem>();
+  RemainingBudget: number = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,8 +17,10 @@ export class MainPageComponent implements OnInit {
 
   addtoBudget(item: BudgetItem){
     this.budgetItems.push(item);
+    this.RemainingBudget+=item.amount;
   }
   deleteItem(item: BudgetItem){
     this.budgetItems.splice(this.budgetItems.indexOf(item),1)
+    this.RemainingBudget-=item.amount;
   }
 }
